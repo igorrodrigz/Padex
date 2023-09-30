@@ -1,46 +1,36 @@
-# Projeto MR Banks
-
-Bem-vindo ao projeto MR Banks! Este é um sistema simples de banco em Python.
-Fomos contratados por um grande banco para desenvolver seu novo sistema. Esse banco deseja modernizar operações e para isso escolheu a linguagem Python. Para a primeira versão do sistema devemos implementar apenas operações: depósito, saque e extrato. Operação de Deposito
-Deve ser possível depositor valores positivos para a minha conta bancária. a Versão 1 do projeto trabalha apenas com 1 usuário, dessa forma não precisamos nos preocupar em identificar qual é o número da agência e da conta bancária. Todos os depósitos devem ser armazenados em uma variável e exibidos na operação de extrato.
+# Padex - Controle de Vendas para Panificadoras
 
 ## Descrição
-
-O projeto MR Banks é uma aplicação de terminal que simula as operações básicas de um banco, como depósito, saque e visualização de extrato.
+O Padex é um programa de contabilidade projetado para padarias e pequenos comércios, oferecendo uma solução intuitiva para o registro e acompanhamento de vendas.
 
 ## Funcionalidades
+- **Registro de Vendas:** Insira informações sobre as vendas, incluindo data, hora, valor e produtos vendidos.
+- **Cálculo de Total de Vendas:** Calcule automaticamente o total de vendas em um período específico.
+- **Relatórios de Vendas:** Visualize relatórios detalhados de todas as vendas registradas.
+- **Exportação de Dados:** Exporte dados de vendas para um arquivo CSV.
+- **Visualização de Vendas do Dia Atual:** Exiba todas as vendas realizadas no dia atual.
+- **Interface Gráfica Intuitiva:** Interface fácil de usar para facilitar o registro e consulta de vendas.
 
-1. **Depositar:** Permite que o usuário deposite uma quantia em dinheiro na conta.
-2. **Sacar:** Permite que o usuário faça saques, considerando o saldo disponível e o limite.
-3. **Extrato:** Mostra as últimas movimentações financeiras, incluindo saldo e limite.
+## Requisitos
+- Python 3.x
+- Tkinter (geralmente já incluído nas distribuições padrão do Python)
+- SQLite (para o banco de dados)
 
-## Como Usar
+## Instalação
+1. Clone este repositório: `git clone https://github.com/igorrodrigz/padex.git`
+2. Acesse o diretório do projeto: `cd padex`
+3. Execute o programa: `python padex.py`
 
-1. Clone este repositório:
-
-    ```bash
-    https://github.com/igorrodrigz?tab=repositories
-    ```
-
-2. Navegue até o diretório do projeto:
-
-    ```bash
-    https://github.com/igorrodrigz/Projetos_Portf-lio_PythonDev/tree/main
-    ```
-
-3. Execute o script Python:
-
-    ```bash
-    python main.py
-    ```
-
-4. Siga as instruções no terminal para interagir com o sistema bancário.
+## Uso
+- Preencha os campos para registrar uma nova venda.
+- Atualize a lista para visualizar as vendas do dia.
+- Calcule o total de vendas em um período específico.
+- Exporte os dados para um arquivo CSV.
 
 ## Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) ou enviar pull requests.
 
-Se desejar contribuir com melhorias, novas funcionalidades ou correções de bugs, sinta-se à vontade para abrir uma "issue" ou enviar um "pull request". Estamos abertos a colaborações!
-
+## Licença
+Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 ## Autor
-
 Igor Rodrigues
-
