@@ -1,0 +1,75 @@
+saldo = 100
+limite = 500
+numero_saques = 0
+LIMITE_SAQUES = 3
+
+def exibir_intro():
+    return """
+    ===========  MENU  ============
+    Olá Bem-vindo cliente MR Banks,
+    é sempre um prazer te-lo com
+    a gente.
+    Mais que um banco, uma família!
+    ===============================
+    """
+
+def exibir_menu():
+    return """
+    1 - Depositar
+    2 - Sacar
+    3 - Extrato
+    0 - Sair
+    ===============================
+    """
+
+def exibir_agradecimento():
+    return """
+    Obrigado por ser nosso cliente.
+    """
+
+def realizar_deposito(saldo):
+    valor_deposito = float(input("Digite o valor a ser depositado: "))
+    saldo += valor_deposito
+    print(f"Seu saldo atual é de R$: {saldo}.")
+    return saldo
+
+def realizar_saque(saldo, numero_saques, limite):
+    valor_saque = float(input("Digite o valor a ser retirado: "))
+    
+    if valor_saque > saldo:
+        print("Saldo insuficiente!")
+    elif valor_saque > limite:
+        print("Limite de saque ultrapassado!")
+    else:
+        saldo -= valor_saque
+        numero_saques += 1
+        print(f"Seu saldo atual é de R$: {saldo}")
+
+    return saldo, numero_saques
+
+def exibir_extrato(saldo, limite):
+    return f"""
+    ==========  EXTRATO  ===========
+    Aqui constam suas últimas 
+    movimentações financeiras, se
+    tiver dúvidas entre em contato.
+    ===============================
+    Saldo : {saldo}
+    Limite : {limite}
+    """
+
+print(exibir_intro())
+opcao = None
+
+while opcao != '0':
+    print(exibir_menu())
+    opcao = input("Selecione uma opção: ")
+
+    if opcao == '1':
+        saldo = realizar_deposito(saldo)
+    elif opcao == '2':
+        saldo, numero_saques = realizar_saque(saldo, numero_saques, limite)
+    elif opcao == '3':
+        print(exibir_extrato(saldo, limite))
+
+print(exibir_agradecimento())
